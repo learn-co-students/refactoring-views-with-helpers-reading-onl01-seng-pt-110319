@@ -1,9 +1,14 @@
+<h1> Edit: <%= @post.title%></h1>
+
 <%= form_for(@post) do |f| %>
+  
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
-
+  <br>
   <label>Post Description</label><br>
   <%= f.text_area :description %><br>
-
+  <br>
+  <label><%= last_updated @post %></label><br>
+  <br>
   <%= f.submit %>
 <% end %>
